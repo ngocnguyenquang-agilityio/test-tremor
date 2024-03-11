@@ -13,7 +13,9 @@
     "test:update": "jest --passWithNoTests --updateSnapshot",
     "prepare": "husky install",
     "minify-static": "terser .next/static/chunks/*.js -o .next/static/chunks/*.js",
-    "minify-server": "terser .next/server/*.js -o .next/server/*.js"
+    "minify-server": "terser .next/server/*.js -o .next/server/*.js",
+    "clean": "cleancss .next/**/*.css",
+    "postinstall": "patch-package"
   },
   "dependencies": {
     "@milahu/patch-package": "^6.4.14",
@@ -21,6 +23,7 @@
     "@tailwindcss/custom-forms": "^0.2.1",
     "@tremor/react": "^3.11.1",
     "bcrypt": "^5.1.1",
+    "clean-css-cli": "^5.6.3",
     "dayjs": "^1.11.10",
     "next": "14.0.5-canary.53",
     "next-auth": "5.0.0-beta.4",
