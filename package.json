@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev && pnpm run minify",
-    "build": "next build",
+    "dev": "next dev && pnpm run minify-static",
+    "build": "next build && pnpm run minify-static && pnpm run minify-server",
     "start": "next start",
     "lint": "next lint",
     "storybook": "storybook dev -p 6006",
@@ -12,9 +12,11 @@
     "test": "jest --passWithNoTests",
     "test:update": "jest --passWithNoTests --updateSnapshot",
     "prepare": "husky install",
-    "minify": "terser .next/**/*.js -o .next/**/*.js"
+    "minify-static": "terser .next/static/chunks/*.js -o .next/static/chunks/*.js",
+    "minify-server": "terser .next/server/*.js -o .next/server/*.js"
   },
   "dependencies": {
+    "@milahu/patch-package": "^6.4.14",
     "@storybook/addon-knobs": "^7.0.2",
     "@tailwindcss/custom-forms": "^0.2.1",
     "@tremor/react": "^3.11.1",
@@ -27,7 +29,7 @@
     "react-hook-form": "^7.48.2",
     "react-icons": "^4.12.0",
     "react-quill": "^2.0.0",
-    "terser": "^5.27.0",
+    "terser": "5.27.0",
     "zod": "^3.22.4"
   },
   "devDependencies": {
