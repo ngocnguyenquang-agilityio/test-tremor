@@ -4,14 +4,15 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && pnpm run minify",
     "start": "next start",
     "lint": "next lint",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "test": "jest --passWithNoTests",
     "test:update": "jest --passWithNoTests --updateSnapshot",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "minify": "terser .next/**/*.js -o .next/**/*.js"
   },
   "dependencies": {
     "@storybook/addon-knobs": "^7.0.2",
@@ -26,6 +27,7 @@
     "react-hook-form": "^7.48.2",
     "react-icons": "^4.12.0",
     "react-quill": "^2.0.0",
+    "terser": "^5.29.1",
     "zod": "^3.22.4"
   },
   "devDependencies": {
