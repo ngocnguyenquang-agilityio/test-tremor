@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev && pnpm run minify-static",
-    "build": "next build && pnpm run minify-static && pnpm run minify-server",
+    "build": "next build && pnpm run minify-static",
     "start": "next start",
     "lint": "next lint",
     "storybook": "storybook dev -p 6006",
@@ -12,10 +12,10 @@
     "test": "jest --passWithNoTests",
     "test:update": "jest --passWithNoTests --updateSnapshot",
     "prepare": "husky install",
-    "minify-static": "terser .next/static/chunks/*.js -o .next/static/chunks/*.js",
-    "minify-server": "terser .next/server/*.js -o .next/server/*.js",
     "clean": "cleancss .next/**/*.css",
-    "postinstall": "patch-package"
+    "postinstall": "patch-package",
+    "minify-static": "terser .next/static/chunks/*.js -o .next/static/chunks/*.js",
+    "minify-server": "terser .next/server/*.js -o .next/server/*.js"
   },
   "dependencies": {
     "@milahu/patch-package": "^6.4.14",
