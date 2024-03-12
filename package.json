@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev && pnpm run minify-static",
-    "build": "next build && pnpm run minify-static",
+    "dev": "next dev && pnpm run minify",
+    "build": "next build && pnpm run minify",
     "start": "next start",
     "lint": "next lint",
     "storybook": "storybook dev -p 6006",
@@ -15,7 +15,12 @@
     "clean": "cleancss .next/**/*.css",
     "postinstall": "patch-package",
     "minify-static": "terser .next/static/chunks/*.js -o .next/static/chunks/*.js",
-    "minify-server": "terser .next/server/*.js -o .next/server/*.js"
+    "minify-server": "pnpm run minify-server-app && pnpm run minify-server-chunks && pnpm run minify-server-pages",
+    "minify-server-app": "terser .next/server/app/**/*.js -o .next/server/app/**/*.js",
+    "minify-server-chunks": "terser .next/server/chunks/*.js -o .next/server/chunks/*.js",
+    "minify-server-pages": "terser .next/server/pages/*.js -o .next/server/pages/*.js",
+    "minify-middleware": "terser \".next/server/middleware.js\" -o \".next/server/.js\"",
+    "minify": "pnpm run minify-static && pnpm run minify-server"
   },
   "dependencies": {
     "@milahu/patch-package": "^6.4.14",
