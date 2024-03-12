@@ -14,9 +14,6 @@ dependencies:
   '@storybook/addon-knobs':
     specifier: ^7.0.2
     version: 7.0.2(@storybook/addons@7.6.7)(@storybook/api@7.6.7)(@storybook/components@7.6.0)(@storybook/core-events@7.6.7)(@storybook/theming@7.6.7)(@types/react@18.2.21)(react-dom@18.2.0)(react@18.2.0)
-  '@tailwindcss/custom-forms':
-    specifier: ^0.2.1
-    version: 0.2.1(tailwindcss@3.3.6)
   '@tremor/react':
     specifier: ^3.11.1
     version: 3.11.1(prop-types@15.8.1)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.3.6)
@@ -61,9 +58,6 @@ devDependencies:
   '@commitlint/config-conventional':
     specifier: ^18.4.3
     version: 18.4.3
-  '@fullhuman/postcss-purgecss':
-    specifier: ^5.0.0
-    version: 5.0.0(postcss@8.4.32)
   '@storybook/addon-essentials':
     specifier: 7.6.0
     version: 7.6.0(@types/react-dom@18.2.14)(@types/react@18.2.21)(react-dom@18.2.0)(react@18.2.0)
@@ -2130,15 +2124,6 @@ packages:
 
   /@floating-ui/utils@0.1.6:
     resolution: {integrity: sha512-OfX7E2oUDYxtBvsuS4e/jSn4Q9Qb6DzgeYtsAdkPZ47znpoNsMgZw0+tVijiv3uGNR6dgNlty6r9rzIzHjtd/A==}
-
-  /@fullhuman/postcss-purgecss@5.0.0(postcss@8.4.32):
-    resolution: {integrity: sha512-onDS/b/2pMRzqSoj4qOs2tYFmOpaspjTAgvACIHMPiicu1ptajiBruTrjBzTKdxWdX0ldaBb7wj8nEaTLyFkJw==}
-    peerDependencies:
-      postcss: ^8.0.0
-    dependencies:
-      postcss: 8.4.32
-      purgecss: 5.0.0
-    dev: true
 
   /@headlessui/react@1.7.17(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-4am+tzvkqDSSgiwrsEpGWqgGo9dz8qU5M3znCkC4PgkpY4HcCZzEDEvozltGGGHIKl9jbXbZPSH5TWn4sWJdow==}
@@ -4535,17 +4520,6 @@ packages:
   /@swc/types@0.1.5:
     resolution: {integrity: sha512-myfUej5naTBWnqOCc/MdVOLVjXUXtIA+NpDrDBKJtLLg2shUjBu3cZmB/85RyitKc55+lUUyl7oRfLOvkr2hsw==}
 
-  /@tailwindcss/custom-forms@0.2.1(tailwindcss@3.3.6):
-    resolution: {integrity: sha512-XdP5XY6kxo3x5o50mWUyoYWxOPV16baagLoZ5uM41gh6IhXzhz/vJYzqrTb/lN58maGIKlpkxgVsQUNSsbAS3Q==}
-    peerDependencies:
-      tailwindcss: ^1.0
-    dependencies:
-      lodash: 4.17.21
-      mini-svg-data-uri: 1.4.4
-      tailwindcss: 3.3.6(ts-node@10.9.2)
-      traverse: 0.6.7
-    dev: false
-
   /@testing-library/dom@9.3.3:
     resolution: {integrity: sha512-fB0R+fa3AUqbLHWyxXa2kGVtf1Fe1ZZFr0Zp6AIbIAzXb2mKbEXl+PCQNUOaq5lbTab5tfctfXRNsWXxa2f7Aw==}
     engines: {node: '>=14'}
@@ -6755,11 +6729,6 @@ packages:
   /commander@8.3.0:
     resolution: {integrity: sha512-OkTL9umf+He2DZkUq8f8J9of7yL6RJKI24dVITBmNfZBmri9zYZQrKkuXiKhyfPSu8tUhnVBB1iKXevvnlR4Ww==}
     engines: {node: '>= 12'}
-    dev: true
-
-  /commander@9.5.0:
-    resolution: {integrity: sha512-KRs7WVDKg86PWiuAqhDrAQnTXZKraVcCc6vFdL14qrZ/DcWwuRo7VoiYXalXO7S5GKpqYiVEwCbgFDfxNHKJBQ==}
-    engines: {node: ^12.20.0 || >=14}
     dev: true
 
   /common-path-prefix@3.0.0:
@@ -9502,17 +9471,6 @@ packages:
       once: 1.4.0
       path-is-absolute: 1.0.1
 
-  /glob@8.1.0:
-    resolution: {integrity: sha512-r8hpEjiQEYlF2QU0df3dS+nxxSIreXQS1qRhMJM0Q5NDdR386C7jb7Hwwod8Fgiuex+k0GFjgft18yvxm5XoCQ==}
-    engines: {node: '>=12'}
-    dependencies:
-      fs.realpath: 1.0.0
-      inflight: 1.0.6
-      inherits: 2.0.4
-      minimatch: 5.1.6
-      once: 1.4.0
-    dev: true
-
   /global-dirs@0.1.1:
     resolution: {integrity: sha512-NknMLn7F2J7aflwFOlGdNIuCDpN3VGoSoB+aap3KABFWbHVn1TCgFC+np23J8W2BiZbjfEw3BFBycSMv1AFblg==}
     engines: {node: '>=4'}
@@ -11815,11 +11773,6 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
-  /mini-svg-data-uri@1.4.4:
-    resolution: {integrity: sha512-r9deDe9p5FJUPZAk3A59wGH7Ii9YrjjWw0jmw/liSbHl2CHiyXj6FcDXDu2K3TjVAXqiJdaw3xxwlZZr9E6nHg==}
-    hasBin: true
-    dev: false
-
   /minimalistic-assert@1.0.1:
     resolution: {integrity: sha512-UtJcAD4yEaGtjPezWuO9wC4nwUnVH/8/Im3yEHQP4b67cXlD/Qr9hdITCU1xDbSEXg2XKNaP8jsReV7vQd00/A==}
     dev: true
@@ -13518,16 +13471,6 @@ packages:
 
   /pure-rand@6.0.4:
     resolution: {integrity: sha512-LA0Y9kxMYv47GIPJy6MI84fqTd2HmYZI83W/kM/SkKfDlajnZYfmXFTxkbY+xSBPkLJxltMa9hIkmdc29eguMA==}
-    dev: true
-
-  /purgecss@5.0.0:
-    resolution: {integrity: sha512-RAnuxrGuVyLLTr8uMbKaxDRGWMgK5CCYDfRyUNNcaz5P3kGgD2b7ymQGYEyo2ST7Tl/ScwFgf5l3slKMxHSbrw==}
-    hasBin: true
-    dependencies:
-      commander: 9.5.0
-      glob: 8.1.0
-      postcss: 8.4.32
-      postcss-selector-parser: 6.0.15
     dev: true
 
   /qs@6.11.0:
@@ -15585,10 +15528,6 @@ packages:
     dependencies:
       punycode: 2.3.1
     dev: true
-
-  /traverse@0.6.7:
-    resolution: {integrity: sha512-/y956gpUo9ZNCb99YjxG7OaslxZWHfCHAUUfshwqOXmxUIvqLjVO581BT+gM59+QV9tFe6/CGG53tsA1Y7RSdg==}
-    dev: false
 
   /trim-newlines@3.0.1:
     resolution: {integrity: sha512-c1PTsA3tYrIsLGkJkzHF+w9F2EyxfXGo4UyJc4pFL++FMjnq0HJS69T3M7d//gKrFKwy429bouPescbjecU+Zw==}
