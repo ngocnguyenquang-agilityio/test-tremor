@@ -12,7 +12,7 @@
     "test": "jest --passWithNoTests",
     "test:update": "jest --passWithNoTests --updateSnapshot",
     "prepare": "husky install",
-    "postinstall": "patch-package",
+    "patch": "patch-package",
     "minify-static": "terser .next/static/chunks/**/*.js -o .next/static/chunks/**/*.js",
     "minify-static-pages": "terser .next/static/chunks/pages/*.js -o .next/static/chunks/pages/*.js",
     "minify-static-app": "terser .next/static/chunks/app/*.js -o .next/static/chunks/app/*.js",
@@ -24,7 +24,6 @@
     "minify": "pnpm run minify-static && pnpm run minify-server"
   },
   "dependencies": {
-    "@milahu/patch-package": "^6.4.14",
     "@storybook/addon-knobs": "^7.0.2",
     "@tremor/react": "^3.11.1",
     "bcrypt": "^5.1.1",
@@ -42,6 +41,7 @@
   "devDependencies": {
     "@commitlint/cli": "^17.8.0",
     "@commitlint/config-conventional": "^18.4.3",
+    "@milahu/patch-package": "^6.4.14",
     "@storybook/addon-essentials": "7.6.0",
     "@storybook/addon-interactions": "7.6.0",
     "@storybook/addon-links": "7.6.0",
