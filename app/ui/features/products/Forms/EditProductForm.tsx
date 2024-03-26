@@ -9,13 +9,14 @@ import { FormProvider, useForm } from "react-hook-form";
 import { Col, Grid, Text } from "@tremor/react";
 import { Button, LoadingIndicator } from "@/ui/components";
 
-// const Socials = dynamic(() => import("../EditProduct/ProductSocials/Socials"));
-// const ProductInfo = dynamic(
-//   () => import("../EditProduct/ProductInfo/ProductInfo"),
-// );
-// const PricingInfo = dynamic(
-//   () => import("../EditProduct/ProductPricing/PricingInfo"),
-// );
+import { ProductImage } from "../EditProduct";
+const Socials = dynamic(() => import("../EditProduct/ProductSocials/Socials"));
+const ProductInfo = dynamic(
+  () => import("../EditProduct/ProductInfo/ProductInfo"),
+);
+const PricingInfo = dynamic(
+  () => import("../EditProduct/ProductPricing/PricingInfo"),
+);
 
 // Services
 import { editProduct } from "@/services";
@@ -32,12 +33,13 @@ import { useToast } from "@/hooks";
 
 // Contexts
 import { ToastMessageType } from "@/context/toast";
-import {
-  PricingInfo,
-  ProductImage,
-  ProductInfo,
-  Socials,
-} from "../EditProduct";
+
+// import {
+//   PricingInfo,
+//   ProductImage,
+//   ProductInfo,
+//   Socials,
+// } from "../EditProduct";
 
 const EditProductForm = ({
   productData,
@@ -178,7 +180,7 @@ const EditProductForm = ({
                 isUpload={isUpload}
               />
             </div>
-            {/* <Col numColSpanSm={1} numColSpanLg={2}>
+            <Col numColSpanSm={1} numColSpanLg={2}>
               <ProductInfo />
             </Col>
             <Col numColSpan={1}>
@@ -186,7 +188,7 @@ const EditProductForm = ({
             </Col>
             <Col numColSpanSm={1} numColSpanLg={2}>
               <PricingInfo />
-            </Col> */}
+            </Col>
           </Grid>
         </form>
       </FormProvider>
