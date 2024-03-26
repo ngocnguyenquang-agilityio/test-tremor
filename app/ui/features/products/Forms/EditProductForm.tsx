@@ -34,13 +34,6 @@ import { useToast } from "@/hooks";
 // Contexts
 import { ToastMessageType } from "@/context/toast";
 
-// import {
-//   PricingInfo,
-//   ProductImage,
-//   ProductInfo,
-//   Socials,
-// } from "../EditProduct";
-
 const EditProductForm = ({
   productData,
   id,
